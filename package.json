@@ -1,0 +1,51 @@
+{
+  "name": "@momsfriendlydevco/changelog",
+  "version": "1.0.0",
+  "description": "React to Git deploys and post changelog notifications to various systems",
+  "scripts": {
+    "lint": "eslint app.js lib"
+  },
+  "type": "module",
+  "bin": {
+    "changelog": "./app.js"
+  },
+  "imports": {
+    "#lib/*": "./lib/*.js"
+  },
+  "exports": {
+    ".": "./lib/changelog.js",
+    "./*": "./lib/*.js"
+  },
+  "main": "lib/changelog.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MomsFriendlyDevCo/ChangeLog.git"
+  },
+  "author": "Matt Carter <matt@mfdc.biz>",
+  "bugs": {
+    "url": "https://github.com/MomsFriendlyDevCo/ChangeLog/issues"
+  },
+  "homepage": "https://github.com/MomsFriendlyDevCo/ChangeLog#readme",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^9.4.1",
+    "execa": "^6.1.0",
+    "hashed-release-name": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 13,
+      "sourceType": "module"
+    }
+  }
+}
